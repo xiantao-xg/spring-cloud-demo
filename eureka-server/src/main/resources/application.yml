@@ -1,0 +1,20 @@
+#服务注册到注册到服务器的名称, 这个名称就是后面调用服务时的服务标识符，即Eureka Service Id
+spring:
+  application:
+    name: eureka-server
+
+#端口配置
+server:
+  port: 8761
+
+#注册中心配置
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    #该实例是否向 Eureka  Server注册自己
+    registerWithEureka: false
+    #该实例是否向 Eureka 服务器获取所有的注册信息表
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
