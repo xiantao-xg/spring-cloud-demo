@@ -26,6 +26,7 @@
         <module>cloud-client</module>
         <module>cloud-provider</module>
         <module>eureka-server</module>
+        <module>gateway</module>
         <module>library</module>
     </modules>
 </project>

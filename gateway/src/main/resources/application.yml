@@ -4,7 +4,6 @@ spring:
   application:
     name: gateway
 
-# 配置Eureka地址
 eureka:
   client:
     serviceUrl:
@@ -15,6 +14,6 @@ eureka:
 zuul:
   prefix: /api
   routes:
-    cloud-client: #自定义名称
-      path: /user/** # 自定义的路由,只会吧*号部分传给服务
-      serviceId: cloud-client # 指向的服务名称
+    cloud-client:
+      path: /user/**
+      serviceId: cloud-client
